@@ -1,0 +1,3 @@
+﻿Invoice Number,Date,Customer Name,Item Description,Item Quantity,Item Price,Item Total,Total Amount
+1008,12-08-2023,Donald Escobar,add,2,76.79,153.58,205.18
+1008,12-08-2023,Donald Escobar,parent,4,12.9,51.6,205.18

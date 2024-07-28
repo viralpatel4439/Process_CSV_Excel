@@ -1,0 +1,4 @@
+﻿Invoice Number,Date,Customer Name,Item Description,Item Quantity,Item Price,Item Total,Total Amount,Error
+1,08-04-2024,Morgan Potter,certainly,8,12.33,98.64,640.39,Invoice Number already processed
+1,08-04-2024,Morgan Potter,world,8,24.35,194.8,640.39,
+1,08-04-2024,Morgan Potter,nature,5,69.39,346.95,640.39,
