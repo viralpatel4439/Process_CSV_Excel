@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "",
+		"name": "Process_CSV_Excel_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": ""
+	},
+	"item": [
+		{
+			"name": "Single file processing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "processing_file",
+							"type": "file",
+							"src": "/D:/Process_CSV_Excel/csv_files/file-10.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{backendAPI}}/fileProcessing",
+					"host": [
+						"{{backendAPI}}"
+					],
+					"path": [
+						"fileProcessing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "batch processing",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "processing_file",
+							"type": "file",
+							"src": [
+								"/D:/Process_CSV_Excel/csv_files/file-1.xlsx",
+								"/D:/Process_CSV_Excel/csv_files/file-2.xlsx",
+								"/D:/Process_CSV_Excel/csv_files/file-3.csv",
+								"/D:/Process_CSV_Excel/csv_files/file-4.xlsx",
+								"/D:/Process_CSV_Excel/csv_files/file-5.csv",
+								"/D:/Process_CSV_Excel/csv_files/file-6.csv",
+								"/D:/Process_CSV_Excel/csv_files/file-7.xlsx"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "{{backendAPI}}/batchFileProcessing",
+					"host": [
+						"{{backendAPI}}"
+					],
+					"path": [
+						"batchFileProcessing"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update invoice number",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "processing_file",
+							"type": "file",
+							"src": "/D:/Process_CSV_Excel/csv_files/file-8.csv"
+						},
+						{
+							"key": "invoiceNumber",
+							"value": "12",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{backendAPI}}/updateInviceNumber",
+					"host": [
+						"{{backendAPI}}"
+					],
+					"path": [
+						"updateInviceNumber"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
