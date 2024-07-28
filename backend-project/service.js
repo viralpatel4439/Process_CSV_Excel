@@ -38,7 +38,7 @@ exports.updateInvoiceNumber = async (
     }
     if (Array.isArray(data) && data.length > 0) {
       if (!("Invoice Number" in senitizedKey(data)[0])) {
-        sucess = false;
+        success = false;
         errorMessage.push({ error: "Invoice Number field not found in file" });
       } else {
         for (const [index, item] of senitizedKey(data).entries()) {
