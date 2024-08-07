@@ -122,3 +122,15 @@ Starting the Frontend Project
         -> This API updates the invoice number in a CSV or Excel file and returns the updated file.
 
         -> The file must contain the Invoice Number field to update the invoice number; otherwise, it will return an error.
+
+### Docker Setup
+    
+    This project is having docker setup so if you want to run this project through docker then below is the commands for it
+
+    1. Starting the Docker Container
+        
+        -> docker-compose up -d
+
+    2. Stopping the Docker Container
+
+        -> docker-compose down

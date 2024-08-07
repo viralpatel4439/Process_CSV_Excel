@@ -5,9 +5,9 @@ const cors = require("cors");
 const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const { processCSV, processExcel, updateInvoiceNumber } = require("./service");
-const path = require('path');
-app.use(express.json({ limit: '500mb' }));
-app.use(express.urlencoded({ limit: '500mb', extended: true }));
+const path = require("path");
+app.use(express.json({ limit: "500mb" }));
+app.use(express.urlencoded({ limit: "500mb", extended: true }));
 app.use(cors());
 
 // Request for single file processing
@@ -114,7 +114,7 @@ app.post(
         } else {
           returnData.push({
             success: false,
-            errorMessage: "File must be in csv or xlsx",
+            errorMessage: [{ error: "File must be in csv or xlsx" }],
             fileName: item.originalname,
           });
         }
@@ -166,7 +166,7 @@ app.patch(
           errorMessage: "File must be in csv or xlsx",
         });
       }
-      
+
       if (data.success) {
         const filePath = path.join(__dirname, `./uploads/${req.file.filename}`);
         return res.status(200).sendFile(filePath, (err) => {
